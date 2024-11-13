@@ -21,6 +21,7 @@ external_stylesheets = [
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"  # Bootstrap Icons 
 ]
 app = Dash(__name__,external_stylesheets=external_stylesheets)
+server = app.server
 df = pd.read_csv('data.csv',parse_dates=['Date'])
 df.columns = df.columns.str.strip()  
 
